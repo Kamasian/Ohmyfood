@@ -1,0 +1,14 @@
+@import "../utils/variables";
+@import "../utils/mixins.scss";
+
+body {
+    font-family: $primary-font;
+}
+
+header h1 {
+    @include shrikhand-weight-size(400, 30px);
+}
+
+.localisation p {
+    @include roboto-weight-size($weight: 500)
+}

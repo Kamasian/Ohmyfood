@@ -1,0 +1,15 @@
+@import "../utils/variables.scss";
+
+/* --- Mixins pour gérer les polices --- */
+
+@mixin roboto-weight-size ($weight: 400, $size: 16px) { 
+    font-family: $primary-font;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin shrikhand-weight-size($weight: 400, $size: 16px) {
+    font-family: $secondary-font;
+    font-weight: $weight;
+    font-size: $size;
+}
