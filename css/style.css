@@ -65,13 +65,13 @@ header h1 {
   font-size: 30px;
 }
 
-.localisation p {
+.localisation p, .fonctionnement p {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
 }
 
-.presentation h2 {
+.presentation h2, .fonctionnement h2 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 24px;
@@ -102,23 +102,83 @@ header {
   height: 18rem;
   background: #f7f7f7;
   display: flex;
-  padding: 0 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   row-gap: 2rem;
+  padding: 0 2rem;
 }
-
 .presentation a {
   color: white;
   padding: 1rem 1.5rem;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
+  transition: all 0.6s;
+}
+.presentation a:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.fonctionnement {
+  height: 23.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.5rem;
+  padding: 0 1.25rem;
+}
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  counter-reset: chiffre;
+}
+.fonctionnement ul li {
+  position: relative;
+  display: flex;
+  padding: 1.75rem 2rem;
+  background: #f7f7f7;
+  border-radius: 1.25rem;
+  transition: all 0.6s;
+}
+.fonctionnement ul li:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #F5EDFF;
+}
+.fonctionnement ul li:hover i {
+  color: #9356DC;
+}
+.fonctionnement ul li::before {
+  counter-increment: chiffre 1;
+  content: counter(chiffre);
+  color: white;
+  padding: 0.3rem 0.5rem;
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-2.7rem, -50%);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14;
+}
+.fonctionnement i {
+  color: hsl(0, 0%, 50%);
+}
+.fonctionnement .fa-mobile-screen-button {
+  margin-right: 1.2rem;
+}
+.fonctionnement .fa-list-ul {
+  margin-right: 1rem;
+}
+.fonctionnement .fa-store {
+  margin-right: 0.875rem;
 }
 
 .localisation p::before {
@@ -130,7 +190,7 @@ header {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f3c5";
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,14 +9,72 @@
     height: 18rem;
     background: lighten($theme-color, 47%);
     display: flex;
-    padding: 0 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     row-gap: 2rem;
+    padding: 0 2rem;
+    & a {
+        @include button-gradient(1.5rem);
+        transition: all 0.6s;
+        &:hover {
+            opacity: 0.9;
+            @include box-shadow-modif (0px, 4px, 10px, 0.45);
+        }
+    }
 }
 
-.presentation a {
-    @include button-gradient(1.5rem);
+.fonctionnement {
+    height: 23.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+    padding: 0 1.25rem;
+    & ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        counter-reset: chiffre;
+        & li {
+            position: relative;
+            display: flex;
+            padding: 1.75rem 2rem;
+            background: lighten($theme-color, 47%);
+            border-radius: 1.25rem;
+            transition: all 0.6s;
+            &:hover {
+                @include box-shadow-modif (0px, 4px, 15px, 0.15);
+                background-color: #F5EDFF;
+                i {
+                    color: $primary-color;
+                }
+            }
+            &::before {
+                counter-increment: chiffre 1;
+                content: counter(chiffre);
+                color: lighten($theme-color, 100%);
+                padding: 0.3rem 0.5rem;
+                background-color: $primary-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-2.7rem, -50%);
+                @include roboto-weight-size(500, 14)
+            }
+        }
+    }
+    i {
+        color: $theme-color;
+    }
+    .fa-mobile-screen-button {
+        @include margin-right-icone(1.2rem);
+    }
+    .fa-list-ul {
+        @include margin-right-icone;
+    }
+    .fa-store {
+        @include margin-right-icone(0.875rem);
+    }
 }

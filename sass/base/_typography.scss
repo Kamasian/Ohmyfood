@@ -1,6 +1,3 @@
-@import "../utils/_variables";
-@import "../utils/_mixins.scss";
-
 body {
     font-family: $primary-font;
 }
@@ -9,15 +6,14 @@ header h1 {
     @include shrikhand-weight-size(400, 30px);
 }
 
-.localisation p {
+.localisation p, .fonctionnement p {
     @include roboto-weight-size($weight: 500);
 }
 
-.presentation h2 {
+.presentation h2, .fonctionnement h2 {
     @include roboto-weight-size (700, 24px);
 }
 
 .presentation p {
     @include roboto-weight-size (300, 18px);
 }
-
