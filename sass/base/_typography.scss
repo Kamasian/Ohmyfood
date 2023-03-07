@@ -26,3 +26,8 @@ header h1 {
     @include roboto-weight-size (300, 17px);
     line-height: 2rem;
 }
+
+footer h4 {
+    @include shrikhand-weight-size (400, 18px);
+    line-height: 4.5rem;
+}

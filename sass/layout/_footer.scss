@@ -1,0 +1,27 @@
+footer {
+    background-color: darken($theme-color, 29%);
+    padding: 0 0 2rem 1.5rem;
+    color: lighten($theme-color, 50%);
+    & ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    }
+    & li {
+        display: flex;
+        align-items: center;
+        & a {
+            @include roboto-weight-size(400, 16px);
+            color: lighten($theme-color, 50%);
+        }
+        & .lien_gras {
+            font-weight: 500;
+        }
+        & .fa-utensils {
+            @include margin-right-icone;
+        }
+        .fa-handshake-angle {
+            @include margin-right-icone(0.625rem);
+        }
+    }
+}
