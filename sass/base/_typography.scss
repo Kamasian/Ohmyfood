@@ -10,10 +10,19 @@ header h1 {
     @include roboto-weight-size($weight: 500);
 }
 
-.presentation h2, .fonctionnement h2 {
+.homepage h2 {
     @include roboto-weight-size (700, 24px);
+}
+
+.homepage h3 {
+    @include roboto-weight-size (700, 18px);
 }
 
 .presentation p {
     @include roboto-weight-size (300, 18px);
+}
+
+#restaurants p {
+    @include roboto-weight-size (300, 17px);
+    line-height: 2rem;
 }
