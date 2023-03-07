@@ -1,5 +1,5 @@
-@import "../utils/variables";
-@import "../utils/mixins.scss";
+@import "../utils/_variables";
+@import "../utils/_mixins.scss";
 
 body {
     font-family: $primary-font;
@@ -10,5 +10,14 @@ header h1 {
 }
 
 .localisation p {
-    @include roboto-weight-size($weight: 500)
+    @include roboto-weight-size($weight: 500);
 }
+
+.presentation h2 {
+    @include roboto-weight-size (700, 24px);
+}
+
+.presentation p {
+    @include roboto-weight-size (300, 18px);
+}
+

@@ -1,0 +1,22 @@
+.localisation {
+    height: 3rem;
+    text-align: center;
+    background: lighten($theme-color, 42%);
+    line-height: 3rem;
+}
+
+.presentation {
+    height: 18rem;
+    background: lighten($theme-color, 47%);
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+.presentation a {
+    @include button-gradient(1.5rem);
+}
