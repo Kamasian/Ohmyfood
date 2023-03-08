@@ -115,7 +115,9 @@ footer h4 {
   font-size: 18px;
 }
 .restaurant_page .menu span {
+  font-family: "Roboto";
   font-weight: 700;
+  font-size: 15px;
 }
 
 header {
@@ -327,8 +329,13 @@ footer li .fa-handshake-angle {
 .restaurant_page main .menu {
   position: relative;
   margin-top: -3.5rem;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 2.5rem 2.5rem 0px 0px;
   background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+  padding: 2rem 1rem;
 }
 .restaurant_page main .menu .conteneur_coeur {
   position: relative;
@@ -349,6 +356,69 @@ footer li .fa-handshake-angle {
 }
 .restaurant_page main .menu .conteneur_coeur:active .coeur_plein {
   opacity: 1;
+}
+
+.section_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  width: 100%;
+}
+.section_menu h3::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background: #99E2D0;
+  margin-top: 0.75rem;
+}
+.section_menu .intitule_plat {
+  height: 4rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.section_menu .intitule_plat .description_carte {
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  overflow: hidden;
+}
+.section_menu .intitule_plat .description_carte h4 {
+  padding-bottom: 0.5rem;
+}
+.section_menu .intitule_plat .description_carte h4, .section_menu .intitule_plat .description_carte p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section_menu .intitule_plat span {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 1rem 1rem 1rem 0;
+}
+.section_menu .intitule_plat .check {
+  position: relative;
+  background: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  width: 60px;
+  margin-right: -60px;
+  transition: all 0.6s;
+}
+.section_menu .intitule_plat .check i {
+  color: #99E2D0;
+  background: white;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 0.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section_menu .intitule_plat:hover .check {
+  margin-right: 0;
 }
 
 .arrow::before {

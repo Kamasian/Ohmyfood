@@ -40,16 +40,16 @@ footer h4 {
 .restaurant_page {
     & .menu {
         & h2 {
-            @include shrikhand-weight-size (400, 28px)
+            @include shrikhand-weight-size (400, 28px);
         }
         & h3 {
-            @include roboto-weight-size (300, 16px)
+            @include roboto-weight-size (300, 16px);
         }
         & h4 {
-            @include roboto-weight-size (500, 18px)
+            @include roboto-weight-size (500, 18px);
         }
         & span {
-            font-weight: 700;
+            @include roboto-weight-size (700, 15px);
         }
     }
 }
