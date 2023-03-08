@@ -2,32 +2,54 @@ body {
     font-family: $primary-font;
 }
 
+// --- Communs ---
+
 header h1 {
     @include shrikhand-weight-size(400, 30px);
-}
-
-.localisation p, .fonctionnement p {
-    @include roboto-weight-size($weight: 500);
-}
-
-.homepage h2 {
-    @include roboto-weight-size (700, 24px);
-}
-
-.homepage h3 {
-    @include roboto-weight-size (700, 18px);
-}
-
-.presentation p {
-    @include roboto-weight-size (300, 18px);
-}
-
-#restaurants p {
-    @include roboto-weight-size (300, 17px);
-    line-height: 2rem;
 }
 
 footer h4 {
     @include shrikhand-weight-size (400, 18px);
     line-height: 4.5rem;
+}
+
+// --- Homepage ---
+
+.homepage {
+
+    & .localisation p, & .fonctionnement p {
+        @include roboto-weight-size($weight: 500);
+    }
+    & h2 {
+        @include roboto-weight-size (700, 24px);
+    }
+    & h3 {
+        @include roboto-weight-size (700, 18px);
+    }
+    & .presentation p {
+        @include roboto-weight-size (300, 18px);
+    }
+    & #restaurants p {
+        @include roboto-weight-size (300, 17px);
+        line-height: 2rem;
+    }
+}
+
+// --- Pages restaurants ---
+
+.restaurant_page {
+    & .menu {
+        & h2 {
+            @include shrikhand-weight-size (400, 28px)
+        }
+        & h3 {
+            @include roboto-weight-size (300, 16px)
+        }
+        & h4 {
+            @include roboto-weight-size (500, 18px)
+        }
+        & span {
+            font-weight: 700;
+        }
+    }
 }

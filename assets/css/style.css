@@ -65,42 +65,57 @@ header h1 {
   font-size: 30px;
 }
 
-.localisation p, .fonctionnement p {
+footer h4 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 4.5rem;
+}
+
+.homepage .localisation p, .homepage .fonctionnement p {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
 }
-
 .homepage h2 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 24px;
 }
-
 .homepage h3 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 18px;
 }
-
-.presentation p {
+.homepage .presentation p {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 18px;
 }
-
-#restaurants p {
+.homepage #restaurants p {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 17px;
   line-height: 2rem;
 }
 
-footer h4 {
+.restaurant_page .menu h2 {
   font-family: "Shrikhand";
   font-weight: 400;
+  font-size: 28px;
+}
+.restaurant_page .menu h3 {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 16px;
+}
+.restaurant_page .menu h4 {
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 18px;
-  line-height: 4.5rem;
+}
+.restaurant_page .menu span {
+  font-weight: 700;
 }
 
 header {
@@ -116,6 +131,17 @@ header {
   text-align: center;
   background: #ebebeb;
   line-height: 3rem;
+}
+.localisation p::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f3c5";
+  margin-right: 1rem;
 }
 
 .presentation {
@@ -182,7 +208,7 @@ header {
   transform: translate(-2.7rem, -50%);
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
 }
 .fonctionnement i {
   color: hsl(0, 0%, 50%);
@@ -245,18 +271,6 @@ header {
   opacity: 1;
 }
 
-.localisation p::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f3c5";
-  margin-right: 1rem;
-}
-
 footer {
   background-color: #363636;
   padding: 0 0 2rem 1.5rem;
@@ -285,6 +299,73 @@ footer li .fa-utensils {
 }
 footer li .fa-handshake-angle {
   margin-right: 0.625rem;
+}
+
+.nouveau::before {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  content: "Nouveau";
+  background: #99E2D0;
+  color: #1e6856;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.restaurant_page main {
+  width: 100%;
+}
+.restaurant_page main img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+}
+.restaurant_page main .menu {
+  position: relative;
+  margin-top: -3.5rem;
+  border-radius: 40px 40px 0px 0px;
+  background: whitesmoke;
+}
+.restaurant_page main .menu .conteneur_coeur {
+  position: relative;
+  width: 21rem;
+}
+.restaurant_page main .menu .conteneur_coeur i {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 0;
+  right: 1rem;
+  transition: all 0.6s ease-in-out;
+}
+.restaurant_page main .menu .conteneur_coeur .coeur_plein {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.restaurant_page main .menu .conteneur_coeur:active .coeur_plein {
+  opacity: 1;
+}
+
+.arrow::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f060";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translate(0, -50%);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

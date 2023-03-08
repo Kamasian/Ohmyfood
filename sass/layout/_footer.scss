@@ -20,7 +20,7 @@ footer {
         & .fa-utensils {
             @include margin-right-icone;
         }
-        .fa-handshake-angle {
+        & .fa-handshake-angle {
             @include margin-right-icone(0.625rem);
         }
     }

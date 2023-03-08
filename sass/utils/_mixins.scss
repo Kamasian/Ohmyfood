@@ -34,3 +34,24 @@
 @mixin box-shadow-modif ($x: 0px, $y: 2px, $blur: 4px, $opacity: 0.15) {
     box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
 }
+
+// --- Mixin pour le coeur, toutes pages ---
+
+@mixin coeur ($bottom: 1.25rem, $right: 1.25rem) {
+    & i {
+        position: absolute;
+        font-size: 1.5rem;
+        bottom: $bottom;
+        right: $right;
+        transition: all 0.6s ease-in-out;
+    }
+    & .coeur_plein {
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        opacity: 0;
+    }
+    &:active .coeur_plein {
+        opacity: 1;
+    }
+}

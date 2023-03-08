@@ -1,0 +1,18 @@
+// --- Flèche pour retour Homepage ---
+
+.arrow::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f060";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translate(0, -50%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: darken($theme-color, 50%);
+}
