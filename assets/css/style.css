@@ -246,9 +246,14 @@ header {
 #restaurants {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
   padding: 3.5rem 1.25rem 4rem 1.25rem;
   background: whitesmoke;
+}
+#restaurants .liste_cartes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
 }
 #restaurants a {
   color: black;
@@ -492,6 +497,91 @@ footer li .fa-handshake-angle {
   font-weight: 700;
   font-size: 1.5rem;
   color: black;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 6rem;
+    line-height: 6rem;
+  }
+  header h1 {
+    font-family: "Shrikhand";
+    font-weight: 400;
+    font-size: 37px;
+  }
+  .presentation h2 {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .fonctionnement {
+    padding: 3rem 13% 5rem 13%;
+  }
+  #restaurants .liste_cartes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  #restaurants .liste_cartes .carte_restaurant {
+    width: 47%;
+  }
+  .boite_commander {
+    width: 70%;
+    height: 9rem;
+    margin: 0 auto;
+  }
+  .boite_commander a {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 992px) {
+  .fonctionnement ul {
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+  .fonctionnement ul li {
+    flex-grow: 1;
+    white-space: nowrap;
+  }
+  #restaurants {
+    padding-left: 13%;
+  }
+  #restaurants .liste_cartes {
+    flex-wrap: nowrap;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 4.5rem;
+    padding: 0 7rem 0 0;
+  }
+  footer ul {
+    flex-direction: row;
+    column-gap: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .arrow::before {
+    left: 4rem;
+  }
+  .restaurant_page main {
+    background: white;
+  }
+  .restaurant_page main .menu {
+    width: 70%;
+    padding: 3rem 4rem 2.5rem 4rem;
+    margin: -3.5rem auto 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant_page main img {
+    height: 25rem;
+  }
+  .restaurant_page main .menu {
+    padding: 3rem 13% 2.5rem 13%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

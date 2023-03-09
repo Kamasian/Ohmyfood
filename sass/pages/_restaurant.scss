@@ -47,6 +47,7 @@
         display: flex;
         overflow: hidden;
         @include box-shadow-modif (0, 4px, 15px, 0.1);
+        // Boucle allant de 2 a 6 (les H3 étant le premier enfant, et 4 entrées sur la note enchantée)
         @for $i from 2 to 6 {
             &:nth-child(#{$i}) {
                 animation-delay: 180ms * $i;
@@ -98,7 +99,6 @@
         }
     }
 }
-
 .boite_commander {
     height: 6rem;
     position: relative;

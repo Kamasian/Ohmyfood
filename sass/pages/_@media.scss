@@ -1,0 +1,120 @@
+// --- Homepage ---
+
+// --- Tablette ---
+
+@media (min-width: 768px) {
+    header {
+        height: 6rem;
+        line-height: 6rem;
+        & h1 {
+            @include shrikhand-weight-size($size: 37px);
+        }
+    }
+    .presentation h2 {
+        @include roboto-weight-size(700, 40px)
+    }
+    .fonctionnement {
+        padding: 3rem 13% 5rem 13%;
+    }
+    #restaurants {
+        & .liste_cartes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            & .carte_restaurant {
+                width: 47%;
+            }
+        }
+    }
+    .boite_commander {
+        width: 70%;
+        height: 9rem;
+        margin: 0 auto;
+        & a {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// --- Desktop ---
+
+@media (min-width: 992px) {
+    .fonctionnement {
+        & ul {
+            flex-direction: row;
+            column-gap: 2rem;
+            & li {
+                flex-grow: 1;
+                white-space: nowrap;
+            }
+        }
+    }
+    #restaurants {
+        padding-left: 13%;
+        .liste_cartes {
+            flex-wrap: nowrap;
+        }
+    }
+    // --- remplacer au dessus --- (modifier largeur des cartes également)
+    // #restaurants .liste_cartes {
+    //     flex-wrap: nowrap;
+    //     overflow-x: scroll;
+    //     &::-webkit-scrollbar {
+    //         height: 5px;
+    //     }
+    //     &::-webkit-scrollbar-track {
+    //         background: linear-gradient(to right, $primary-color, $secondary-color);
+    //     }
+    //     &::-webkit-scrollbar-thumb {
+    //         border-radius: 6px;
+    //         background: $tertiary-color;
+    //     }
+    // }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 4.5rem;
+        padding: 0 7rem 0 0;
+        & ul {
+            flex-direction: row;
+            column-gap: 2.5rem;
+        }
+    }
+}
+
+// --- Page restaurant ---
+
+// --- Tablette ---
+
+@media (min-width: 768px) {
+    .arrow::before {
+        left: 4rem;
+    }
+    .restaurant_page {
+        main {
+            background: lighten($theme-color, 50%);
+            & .menu {
+                width: 70%;
+                padding: 3rem 4rem 2.5rem 4rem;
+                margin: -3.5rem auto 0 auto;
+            }
+        }
+    }
+}
+
+// --- Desktop ---
+
+@media (min-width: 992px) {
+    .restaurant_page {
+        main {
+            & img {
+                height: 25rem;
+            }
+            & .menu {
+                padding: 3rem 13% 2.5rem 13%;
+            }
+        }
+    }
+}

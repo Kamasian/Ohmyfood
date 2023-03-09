@@ -17,7 +17,6 @@
         @include margin-right-icone;
     }
 }
-
 .presentation {
     background: lighten($theme-color, 46%);
     display: flex;
@@ -35,7 +34,6 @@
         }
     }
 }
-
 .fonctionnement {
     display: flex;
     flex-direction: column;
@@ -87,13 +85,17 @@
         @include margin-right-icone(0.875rem);
     }
 }
-
 #restaurants {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
     padding: 3.5rem 1.25rem 4rem 1.25rem;
     background: lighten($theme-color, 46%);
+    & .liste_cartes {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+    }
     & a {
         color: darken($theme-color, 50%);
     }
