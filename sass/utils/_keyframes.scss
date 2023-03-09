@@ -1,4 +1,4 @@
-// --- animation pour apparition des menus ---
+// --- Apparition des menus ---
 
 @keyframes slidetop {
     from {
@@ -11,13 +11,59 @@
     }
   }
 
-// --- Animation pour rotation du check ---
+// --- Rotation du check ---
 
-@keyframes rotate {
-    from {
-        transform: rotate(-360deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
+@keyframes rotate-check {
+    from {transform: rotate(-360deg);}
+    to {transform: rotate(0deg);}
+}
+
+// ---Rotation du Loader ---
+
+@keyframes rotate-loader {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+// --- Disparition du loader ---
+
+@keyframes out {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  90% {
+      transform: scale(1);
+      opacity: 1;
+
+  }
+  100% {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
+// --- Couleur et mouvement Loader ---
+
+@keyframes mouvement-couleurs-lettres {
+  0% {transform: translateX(0px);
+      color: transparent;
+      filter: blur(0.01)}
+  14% {transform: translateX(-10px);
+      color: red}
+  28% {transform: translateX(0px);
+      color: orange}
+  42% {transform: translateX(10px);
+      color: yellow}
+  56% {transform: translateX(0px);
+      color: green}
+  70% {transform: translateX(-10px);
+      color: blue;
+      filter: blur(0.01)}
+  84% {transform: translateX(0px);
+      color: indigo}
+  98% {transform: translateX(10px);
+      color: violet}
+  100% {transform: translateX(0px);
+      color: transparent;}
 }

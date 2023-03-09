@@ -65,7 +65,7 @@ table {
     opacity: 100%;
   }
 }
-@keyframes rotate {
+@keyframes rotate-check {
   from {
     transform: rotate(-360deg);
   }
@@ -73,6 +73,145 @@ table {
     transform: rotate(0deg);
   }
 }
+@keyframes rotate-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes mouvement-couleurs-lettres {
+  0% {
+    transform: translateX(0px);
+    color: transparent;
+    filter: blur(0.01);
+  }
+  14% {
+    transform: translateX(-10px);
+    color: red;
+  }
+  28% {
+    transform: translateX(0px);
+    color: orange;
+  }
+  42% {
+    transform: translateX(10px);
+    color: yellow;
+  }
+  56% {
+    transform: translateX(0px);
+    color: green;
+  }
+  70% {
+    transform: translateX(-10px);
+    color: blue;
+    filter: blur(0.01);
+  }
+  84% {
+    transform: translateX(0px);
+    color: indigo;
+  }
+  98% {
+    transform: translateX(10px);
+    color: violet;
+  }
+  100% {
+    transform: translateX(0px);
+    color: transparent;
+  }
+}
+.loader {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: #fafafa;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  animation: out 4s forwards;
+}
+.loader::before {
+  position: absolute;
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid #9356DC;
+  border-bottom: 5px solid #9356DC;
+  border-radius: 50%;
+  content: "\f2e7";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 30px;
+  color: #99E2D0;
+  animation: rotate-loader 3s 1 linear both;
+}
+.loader::after {
+  position: absolute;
+  top: 165px;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-right: 5px solid #FF79DA;
+  border-left: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: rotate-loader 5s 1 linear both reverse;
+}
+.loader .lettres {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+}
+.loader .lettres p {
+  font-family: "Shrikhand";
+  font-weight: 700;
+  font-size: 28px;
+  animation: mouvement-couleurs-lettres 3.4s infinite forwards;
+}
+.loader .lettres p:nth-child(1) {
+  animation-delay: 200ms;
+}
+.loader .lettres p:nth-child(2) {
+  animation-delay: 400ms;
+}
+.loader .lettres p:nth-child(3) {
+  animation-delay: 600ms;
+}
+.loader .lettres p:nth-child(4) {
+  animation-delay: 800ms;
+}
+.loader .lettres p:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.loader .lettres p:nth-child(6) {
+  animation-delay: 1200ms;
+}
+.loader .lettres p:nth-child(7) {
+  animation-delay: 1400ms;
+}
+
 body {
   font-family: "Roboto";
 }
@@ -456,7 +595,7 @@ footer li .fa-handshake-angle {
   margin-right: 0;
 }
 .section_menu .intitule_plat:hover i {
-  animation: rotate 0.8s;
+  animation: rotate-check 0.8s;
 }
 
 .boite_commander {
