@@ -1,0 +1,23 @@
+// --- animation pour apparition des menus ---
+
+@keyframes slidetop {
+    from {
+      transform: translatey(1.5rem);
+      opacity: 0%;
+    }
+    to {
+      transform: translatey(0);
+      opacity: 100%;
+    }
+  }
+
+// --- Animation pour rotation du check ---
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
