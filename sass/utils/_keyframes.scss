@@ -46,9 +46,7 @@
 // --- Couleur et mouvement Loader ---
 
 @keyframes mouvement-couleurs-lettres {
-  0% {transform: translateX(0px);
-      color: transparent;
-      filter: blur(0.01)}
+  0% {transform: translateX(0px);}
   14% {transform: translateX(-10px);
       color: red}
   28% {transform: translateX(0px);
@@ -58,8 +56,7 @@
   56% {transform: translateX(0px);
       color: green}
   70% {transform: translateX(-10px);
-      color: blue;
-      filter: blur(0.01)}
+      color: blue;}
   84% {transform: translateX(0px);
       color: indigo}
   98% {transform: translateX(10px);

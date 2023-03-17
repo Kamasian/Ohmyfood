@@ -46,7 +46,7 @@
         transition: all 0.6s ease-in-out;
     }
     & .coeur_plein {
-        background-image: linear-gradient(#FF79DA, #9356DC);
+        background-image: linear-gradient($secondary-color, $primary-color);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         opacity: 0;

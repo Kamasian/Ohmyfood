@@ -98,8 +98,6 @@ table {
 @keyframes mouvement-couleurs-lettres {
   0% {
     transform: translateX(0px);
-    color: transparent;
-    filter: blur(0.01);
   }
   14% {
     transform: translateX(-10px);
@@ -120,7 +118,6 @@ table {
   70% {
     transform: translateX(-10px);
     color: blue;
-    filter: blur(0.01);
   }
   84% {
     transform: translateX(0px);
@@ -145,7 +142,7 @@ table {
   z-index: 1;
   display: grid;
   place-items: center;
-  animation: out 4s forwards;
+  animation: out 3s forwards;
 }
 .loader::before {
   position: absolute;
@@ -343,13 +340,14 @@ header {
 .fonctionnement ul li {
   position: relative;
   display: flex;
-  padding: 1.75rem 2rem;
+  padding: 2rem 2rem;
   background: whitesmoke;
   border-radius: 1.25rem;
   transition: all 0.6s;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement ul li:hover {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   background-color: #F5EDFF;
 }
 .fonctionnement ul li:hover i {
@@ -685,7 +683,7 @@ footer li .fa-handshake-angle {
     white-space: nowrap;
   }
   #restaurants {
-    padding-left: 13%;
+    padding: 0 13% 0 13%;
   }
   #restaurants .liste_cartes {
     flex-wrap: nowrap;
