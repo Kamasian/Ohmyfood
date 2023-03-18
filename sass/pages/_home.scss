@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
-    padding: 3rem 1.25rem 4.25rem 1.25rem;
+    padding: 3rem 1.25rem 4.25rem 2rem;
     & ul {
         display: flex;
         flex-direction: column;
@@ -122,6 +122,88 @@
         }
         & .conteneur_coeur {
             @include coeur;
+        }
+    }
+}
+
+// --- Media Queries ---
+
+// --- Tablette ---
+
+@media (min-width: 768px) {
+    header {
+        height: 6rem;
+        line-height: 6rem;
+        & h1 {
+            @include shrikhand-weight-size($size: 37px);
+        }
+    }
+    .presentation h2 {
+        @include roboto-weight-size(700, 40px)
+    }
+    .fonctionnement {
+        padding: 3rem 8% 5rem 8%;
+    }
+    #restaurants {
+        & .liste_cartes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            & .carte_restaurant {
+                width: 47%;
+            }
+        }
+    }
+}
+
+// --- Desktop ---
+
+@media (min-width: 992px) {
+    .fonctionnement {
+        & ul {
+            flex-direction: row;
+            column-gap: 2rem;
+            & li {
+                flex-grow: 1;
+                white-space: nowrap;
+            }
+        }
+    }
+    #restaurants {
+        padding: 0 8% 5rem 8%;
+        .liste_cartes {
+            flex-wrap: nowrap;
+        }
+    }
+    // --- remplacer au dessus --- (et modifier le pagging left ligne 145 (8% => 13%)
+    // #restaurants {
+    //     padding: 0 0 5rem 13%;
+    //     & .liste_cartes {
+    //     flex-wrap: nowrap;
+    //     overflow-x: scroll;
+    //         &::-webkit-scrollbar {
+    //             height: 5px;
+    //         }
+    //         &::-webkit-scrollbar-track {
+    //             background: linear-gradient(to right, $primary-color, $secondary-color);
+    //         }
+    //         &::-webkit-scrollbar-thumb {
+    //             border-radius: 6px;
+    //             background: $tertiary-color;
+    //         }
+    //         & .carte_restaurant img {
+    //             width: 335px;
+    //         }
+    //     }
+    // }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 4.5rem;
+        padding: 0 7rem 0 0;
+        & ul {
+            flex-direction: row;
+            column-gap: 2.5rem;
         }
     }
 }

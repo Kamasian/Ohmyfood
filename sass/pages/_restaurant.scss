@@ -114,3 +114,48 @@
         }
     }
 }
+
+// --- Media Queries ---
+
+// --- Tablette ---
+
+@media (min-width: 768px) {
+    .arrow::before {
+        left: 4rem;
+    }
+    .restaurant_page {
+        main {
+            background: lighten($theme-color, 50%);
+            & .menu {
+                width: 70%;
+                padding: 3rem 4rem 2.5rem 4rem;
+                margin: -3.5rem auto 0 auto;
+            }
+        }
+    }
+}
+
+// --- Desktop ---
+
+@media (min-width: 992px) {
+    .restaurant_page {
+        main {
+            & img {
+                height: 25rem;
+            }
+            & .menu {
+                padding: 3rem 13% 2.5rem 13%;
+            }
+        }
+    }
+    .boite_commander {
+        width: 70%;
+        height: 9rem;
+        margin: 0 auto;
+        & a {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
